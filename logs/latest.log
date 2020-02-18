@@ -169,3 +169,17 @@
 [20:59:30] [Async Chat Thread - #1/INFO]: [L]<TyLoDesu> s
 [20:59:30] [Async Chat Thread - #1/INFO]: [L]?TyLoDesu ? s
 [21:00:48] [Server thread/INFO]: TyLoDesu issued server command: /afk
+[21:03:55] [Server thread/INFO]: TyLoDesu issued server command: /info
+[21:04:00] [Server thread/INFO]: TyLoDesu issued server command: /
+[21:04:03] [Server thread/INFO]: TyLoDesu issued server command: /info
+[21:04:12] [Server thread/INFO]: TyLoDesu issued server command: /rules
+[21:04:15] [Server thread/INFO]: TyLoDesu issued server command: /rules
+[21:05:22] [Async Chat Thread - #2/INFO]: [L]<TyLoDesu> s
+[21:05:22] [Async Chat Thread - #2/INFO]: [L]?TyLoDesu ? s
+[21:05:28] [Async Chat Thread - #2/INFO]: [Shout] ?TyLoDesu ? s
+[21:09:55] [Server thread/INFO]: TyLoDesu issued server command: /tppos 582 26 -1547
+[21:10:03] [Server thread/INFO]: TyLoDesu issued server command: /tppos 582 26 -1548
+[21:10:11] [Server thread/INFO]: TyLoDesu issued server command: /setspawn
+[21:10:20] [Server thread/INFO]: TyLoDesu issued server command: /setworldspawn
+[21:10:20] [Server thread/INFO]: [TyLoDesu: Set the world spawn point to (582, 25, -1548)]
+[21:10:26] [Server thread/INFO]: TyLoDesu issued server command: /spawn

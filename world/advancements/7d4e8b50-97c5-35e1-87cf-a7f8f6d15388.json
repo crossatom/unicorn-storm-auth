@@ -1,10 +1,4 @@
 {
-  "minecraft:recipes/transportation/acacia_boat": {
-    "criteria": {
-      "entered_water": "2020-02-18 17:46:49 +0000"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "entered_water": "2020-02-18 17:46:49 +0000"
@@ -14,6 +8,36 @@
   "minecraft:recipes/transportation/birch_boat": {
     "criteria": {
       "entered_water": "2020-02-18 17:46:49 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "zombie": "2020-02-18 20:15:16 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "zombie": "2020-02-18 20:15:16 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/polished_diorite": {
+    "criteria": {
+      "has_stone": "2020-02-18 21:07:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "entered_water": "2020-02-18 17:46:49 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/andesite": {
+    "criteria": {
+      "has_stone": "2020-02-18 21:07:09 +0000"
     },
     "done": true
   },
@@ -29,23 +53,17 @@
     },
     "done": true
   },
-  "minecraft:adventure/kill_a_mob": {
-    "criteria": {
-      "zombie": "2020-02-18 20:15:16 +0000"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/jungle_boat": {
     "criteria": {
       "entered_water": "2020-02-18 17:46:49 +0000"
     },
     "done": true
   },
-  "minecraft:adventure/kill_all_mobs": {
+  "minecraft:recipes/misc/gold_ingot_from_block": {
     "criteria": {
-      "zombie": "2020-02-18 20:15:16 +0000"
+      "has_gold_block": "2020-02-18 21:09:30 +0000"
     },
-    "done": false
+    "done": true
   },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
