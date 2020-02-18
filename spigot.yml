@@ -48,7 +48,7 @@ commands:
   - tellraw
 messages:
   whitelist: Вас нет в белом списке!
-  unknown-command: 'Неизвестная команда'
+  unknown-command: Неизвестная команда
   server-full: Сервер полон!
   outdated-client: Ваш клиент не соответствует версии сервера. Используйте {0}
   outdated-server: Ваш клиент не соответствует версии сервера. Используйте {0}
@@ -93,6 +93,7 @@ world-settings:
       swim-multiplier: 0.01
       sprint-multiplier: 0.1
       other-multiplier: 0.0
+    max-tnt-per-tick: 100
     mob-spawn-range: 4
     growth:
       cactus-modifier: 100
@@ -105,20 +106,19 @@ world-settings:
       netherwart-modifier: 100
       vine-modifier: 100
       cocoa-modifier: 100
-    max-tnt-per-tick: 100
     max-tick-time:
       tile: 50
       entity: 50
     squid-spawn-range:
       min: 45.0
-    merge-radius:
-      exp: 3.0
-      item: 2.5
     item-despawn-rate: 6000
+    merge-radius:
+      item: 2.5
+      exp: 3.0
     arrow-despawn-rate: 1200
     enable-zombie-pigmen-portal-spawns: true
-    zombie-aggressive-towards-villager: true
     wither-spawn-sound-radius: 0
     view-distance: 10
     hanging-tick-frequency: 100
+    zombie-aggressive-towards-villager: true
     nerf-spawner-mobs: false
