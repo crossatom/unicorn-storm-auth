@@ -24,7 +24,7 @@
 ############################################################
 
 # A color code between 0-9 or a-f. Set to 'none' to disable.
-ops-name-color: '4'
+ops-name-color: 'с'
 
 # The character(s) to prefix all nicknames, so that you know they are not true usernames.
 nickname-prefix: '~'
@@ -35,7 +35,7 @@ max-nick-length: 15
 # A list of phrases that cannot be used in nicknames. You can include regular expressions here.
 # Users with essentials.nick.blacklist.bypass will be able to bypass this filter.
 nick-blacklist:
-#- Notch
+- Notch
 #- '^Dinnerbone'
 
 # When this option is enabled, nickname length checking will exclude color codes in player names.
@@ -310,24 +310,18 @@ pastebin-createkit: false
 # Color is not an actual sign, it's for enabling using color codes on signs, when the correct permissions are given.
 
 enabledSigns:
-  #- color
-  #- balance
-  #- buy
-  #- sell
-  #- trade
-  #- free
-  #- disposal
-  #- warp
-  #- kit
-  #- mail
-  #- enchant
-  #- gamemode
-  #- heal
-  #- info
-  #- spawnmob
-  #- repair
-  #- time
-  #- weather
+  - color
+  - balance
+  - buy
+  - sell
+  - trade
+  - free
+  - warp
+  - kit
+  - mail
+  - heal
+  - info
+  - repair
 
 # How many times per second can Essentials signs be interacted with per player.
 # Values should be between 1-20, 20 being virtually no lag protection.
@@ -365,7 +359,7 @@ per-warp-permission: false
 list:
     # To merge groups, list the groups you wish to merge
     #Staff: owner admin moderator
-    Admins: owner admin
+    Admins: god admin moder helper
     # To limit groups, set a max user limit
     #builder: 20
     # To hide groups, set the group as hidden
@@ -390,13 +384,13 @@ remove-god-on-disconnect: false
 # After this timeout in seconds, the user will be set as AFK.
 # This feature requires the player to have essentials.afk.auto node.
 # Set to -1 for no timeout.
-auto-afk: 300
+auto-afk: 160
 
 # Auto-AFK Kick
 # After this timeout in seconds, the user will be kicked from the server.
 # essentials.afk.kickexempt node overrides this feature.
 # Set to -1 for no timeout.
-auto-afk-kick: -1
+auto-afk-kick: 200
 
 # Set this to true, if you want to freeze the player, if the player is AFK.
 # Other players or monsters can't push the player out of AFK mode then.
@@ -425,7 +419,7 @@ sleep-ignores-afk-players: true
 # Set the player's list name when they are AFK. This is none by default which specifies that Essentials 
 # should not interfere with the AFK player's list name.
 # You may use color codes, use {USERNAME} the player's name or {PLAYER} for the player's displayname.
-afk-list-name: "none"
+afk-list-name: "Ⓐ"
 
 # You can disable the death messages of Minecraft here.
 death-messages: true
@@ -437,11 +431,11 @@ allow-silent-join-quit: false
 
 # You can set a custom join message here, set to "none" to disable.
 # You may use color codes, use {USERNAME} the player's name or {PLAYER} for the player's displayname.
-custom-join-message: "none"
+custom-join-message: "&f◀ &aUnicorn &f ▶ &e{USERNAME} подключился!"
 
 # You can set a custom quit message here, set to "none" to disable.
 # You may use color codes, use {USERNAME} the player's name or {PLAYER} for the player's displayname.
-custom-quit-message: "none"
+custom-quit-message: "&f◀ &aUnicorn &f ▶ &e{USERNAME} вышел!"
 
 # Add worlds to this list, if you want to automatically disable god mode there.
 no-god-in-worlds:
@@ -480,10 +474,10 @@ register-back-in-listener: false
 login-attack-delay: 5
 
 #Set the max fly speed, values range from 0.1 to 1.0
-max-fly-speed: 0.8
+max-fly-speed: 10
 
 #Set the max walk speed, values range from 0.1 to 1.0
-max-walk-speed: 0.8
+max-walk-speed: 10
 
 #Set the maximum amount of mail that can be sent within a minute.
 mails-per-minute: 1000
@@ -600,9 +594,10 @@ world-home-permissions: false
 # Create the 'home-rank' below, and give the matching permission: essentials.sethome.multiple.<home-rank>
 # For more information, visit http://wiki.ess3.net/wiki/Multihome
 sethome-multiple:
-  default: 3
-  vip: 5
-  staff: 10
+  unauth: 0
+  auth: 0
+  staff: 1
+  admin: 2
 
 # In this example someone with 'essentials.sethome.multiple' and 'essentials.sethome.multiple.vip' will have 5 homes.
 # Remember, they MUST have both permission nodes in order to be able to set multiple homes.
@@ -626,7 +621,7 @@ max-projectile-speed: 8
 # For more information, visit http://wiki.ess3.net/wiki/Essentials_Economy
 
 # Defines the balance with which new players begin. Defaults to 0.
-starting-balance: 0
+starting-balance: 250
 
 # worth-# defines the value of an item when it is sold to the server via /sell.
 # These are now defined in worth.yml
@@ -634,34 +629,32 @@ starting-balance: 0
 # Defines the cost to use the given commands PER USE.
 # Some commands like /repair have sub-costs, check the wiki for more information.
 command-costs:
-  # /example costs $1000 PER USE
-  #example: 1000
-  # /kit tools costs $1500 PER USE
-  #kit-tools: 1500
+  kit-buyfood: 1200
+  kit-buypvp: 2500
 
 # Set this to a currency symbol you want to use.
 # Remember, if you want to use special characters in this document, 
 # such as accented letters, you MUST save the file as UTF-8, not ANSI.
-currency-symbol: '$'
+currency-symbol: '₱'
 
 # Set the maximum amount of money a player can have.
 # The amount is always limited to 10 trillion because of the limitations of a java double.
-max-money: 10000000000000
+max-money: 1000000000000
 
 # Set the minimum amount of money a player can have (must be above the negative of max-money).
 # Setting this to 0, will disable overdrafts/loans completely.  Users need 'essentials.eco.loan' perm to go below 0.
-min-money: -10000
+min-money: -20000
 
 # Enable this to log all interactions with trade/buy/sell signs and sell command.
 economy-log-enabled: false
 
 # Minimum acceptable amount to be used in /pay.
-minimum-pay-amount: 0.001
+minimum-pay-amount: 1
 
 # The format of currency, excluding symbols. See currency-symbol-format-locale for symbol configuration.
 #
 # "#,##0.00" is how the majority of countries display currency.
-#currency-format: "#,##0.00"
+currency-format: "#.##0,00"
 
 # Format currency symbols. Some locales use , and . interchangeably.
 # Some formats do not display properly in-game due to faulty Minecraft font rendering.
@@ -701,20 +694,17 @@ chat:
   # Users with essentials.chat.shout can override this by prefixing text with an exclamation mark (!)
   # Users with essentials.chat.question can override this by prefixing text with a question mark (?)
   # You can add command costs for shout/question by adding chat-shout and chat-question to the command costs section."
-  radius: 0
+  radius: 32
 
   # Chat formatting can be done in two ways, you can either define a standard format for all chat.
   # Or you can give a group specific chat format, to give some extra variation.
   # For more information of chat formatting, check out the wiki: http://wiki.ess3.net/wiki/Chat_Formatting
   # For EssentialsX changes, take a look at the EssentialsX wiki: https://github.com/EssentialsX/Essentials/wiki
 
-  format: '<{DISPLAYNAME}> {MESSAGE}'
-  #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
-  #format: '&7{PREFIX}&r {DISPLAYNAME}&r &7{SUFFIX}&r: {MESSAGE}'
+  format: '&r{DISPLAYNAME} &7➨ &f{MESSAGE}'
 
   group-formats:
-  #  Default: '{WORLDNAME} {DISPLAYNAME}&7:&r {MESSAGE}'
-  #  Admins: '{WORLDNAME} &c[{GROUP}]&r {DISPLAYNAME}&7:&c {MESSAGE}'
+
 
   # If you are using group formats make sure to remove the '#' to allow the setting to be read.
 
