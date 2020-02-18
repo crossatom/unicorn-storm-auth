@@ -1,7 +1,28 @@
 groups:
-  default:
+  nonauth:
     options:
       default: true
+      prefix: ''
     permissions:
-    - modifyworld.*
+    - authme.player.*
+  user:
+    options:
+      default: false
+      prefix: '&eⓅ&r'
+    permissions:
+    - bungeecord.command.(server|list)
+  staff:
+    options:
+      default: false
+      prefix: '&6Ⓢ&r'
+    permissions:
+    - essentials.(bigtree|break|exp|feed|firework|gamemode|god|heal|ban|tempban)
+    - bungeecord.command.(alert|ip|end|reload)
+  god:
+    options:
+      default: false
+      prefix: '&cⒶ&r'
+    permissions:
+    - '*'
+
 schema-version: 1
