@@ -10,5 +10,5 @@ backends:
         prefix: pex
         url: jdbc:h2:permissions
         type: sql
-server-tags: []
 default-backend: default-file
+server-tags: []
