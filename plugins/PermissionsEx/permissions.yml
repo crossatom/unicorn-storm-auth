@@ -10,6 +10,7 @@ groups:
       default: false
       prefix: '&eⓅ&r'
     permissions:
+    - essentials.(afk|help|helpop|info)
     - bungeecord.command.(server|list)
   staff:
     options:
