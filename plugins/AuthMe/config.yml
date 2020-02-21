@@ -375,9 +375,9 @@ Email:
     emailOauth2Token: ''
 Hooks:
     # Do we need to hook with multiverse for spawn checking?
-    multiverse: true
+    multiverse: false
     # Do we need to hook with BungeeCord?
-    bungeecord: true
+    bungeecord: false
     # Send player to this BungeeCord server after register/login
     sendPlayerTo: ''
     # Do we need to disable Essentials SocialSpy on join?
@@ -437,7 +437,7 @@ Security:
         # Stop the server if we can't contact the sql database
         # Take care with this, if you set this to false,
         # AuthMe will automatically disable and the server won't be protected!
-        stopServer: true
+        stopServer: false
     console:
         # Copy AuthMe log output in a separate file as well?
         logConsole: true
