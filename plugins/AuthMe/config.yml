@@ -16,11 +16,11 @@ DataSource:
     # Set this option to false at your own risk if and only if you know what you're doing
     mySQLCheckServerCertificate: true
     # Username to connect to the MySQL database
-    mySQLUsername: authme
+    mySQLUsername: root
     # Password to connect to the MySQL database
-    mySQLPassword: '12345'
+    mySQLPassword: unicorn
     # Database Name, use with converters or as SQLITE database name
-    mySQLDatabase: authme
+    mySQLDatabase: unicorn
     # Table of the database
     mySQLTablename: authme
     # Column of IDs to sort data
@@ -99,7 +99,7 @@ settings:
         # The next time the player joins the server, if his IP
         # is the same as last time and the timeout hasn't
         # expired, he will not need to authenticate.
-        enabled: false
+        enabled: true
         # After how many minutes should a session expire?
         # A player's session ends after the timeout or if his IP has changed
         timeout: 10
@@ -138,7 +138,7 @@ settings:
         - /totp
         # Max number of allowed registrations per IP
         # The value 0 means an unlimited number of registrations!
-        maxRegPerIp: 1
+        maxRegPerIp: 5
         # Minimum allowed username length
         minNicknameLength: 3
         # Maximum allowed username length
@@ -377,7 +377,7 @@ Hooks:
     # Do we need to hook with multiverse for spawn checking?
     multiverse: true
     # Do we need to hook with BungeeCord?
-    bungeecord: false
+    bungeecord: true
     # Send player to this BungeeCord server after register/login
     sendPlayerTo: ''
     # Do we need to disable Essentials SocialSpy on join?
