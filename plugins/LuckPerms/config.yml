@@ -217,7 +217,7 @@ watch-files: true
 messaging-service: auto
 
 # If LuckPerms should automatically push updates after a change has been made with a command.
-auto-push-updates: true
+auto-push-updates: false
 
 # If LuckPerms should push logging entries to connected servers via the messaging service.
 push-log-entries: true
@@ -430,7 +430,7 @@ apply-bukkit-child-permissions: true
 # - Plugin authors can define permissions which should be given to all users by default, or setup
 #   permissions which should/shouldn't be given to opped players.
 # - If this option is set to false, LuckPerms will ignore these defaults.
-apply-bukkit-default-permissions: true
+apply-bukkit-default-permissions: false
 
 # If the plugin should apply attachment permissions.
 #

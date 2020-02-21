@@ -13,7 +13,7 @@
 
 # If you have problems join the Essentials help support channel: http://tiny.cc/EssentialsChat
 
-# Version 2.17.1.61
+# Version 2.17.1.0
 
 # KITS ARE NOW IN THE kits.yml FILE
 
@@ -24,19 +24,13 @@
 ############################################################
 
 # A color code between 0-9 or a-f. Set to 'none' to disable.
-ops-name-color: '4'
+ops-name-color: '7'
 
 # The character(s) to prefix all nicknames, so that you know they are not true usernames.
 nickname-prefix: '~'
 
 # The maximum length allowed in nicknames. The nickname prefix is included in this.
 max-nick-length: 15
-
-# A list of phrases that cannot be used in nicknames. You can include regular expressions here.
-# Users with essentials.nick.blacklist.bypass will be able to bypass this filter.
-nick-blacklist:
-#- Notch
-#- '^Dinnerbone'
 
 # When this option is enabled, nickname length checking will exclude color codes in player names.
 # ie: "&6Notch" has 7 characters (2 are part of a color code), a length of 5 is used when this option is set to true
@@ -97,7 +91,7 @@ heal-cooldown: 60
 # Near Radius
 # The default radius with /near
 # Used to use chat radius but we are going to make it separate.
-near-radius: 200
+near-radius: 64
 
 # What to prevent from /item and /give.
 # e.g item-spawn-blacklist: 10,11,46
@@ -131,7 +125,7 @@ drop-items-if-full: false
 
 # Essentials Mail Notification
 # Should we notify players if they have no new mail?
-notify-no-new-mail: true
+notify-no-new-mail: false
 
 # Specifies the duration (in seconds) between each time a player is notified of mail they have.
 # Useful for servers with a lot of mail traffic.
@@ -310,29 +304,20 @@ pastebin-createkit: false
 # Color is not an actual sign, it's for enabling using color codes on signs, when the correct permissions are given.
 
 enabledSigns:
-  #- color
-  #- balance
-  #- buy
-  #- sell
-  #- trade
-  #- free
-  #- disposal
-  #- warp
-  #- kit
-  #- mail
-  #- enchant
-  #- gamemode
-  #- heal
-  #- info
-  #- spawnmob
-  #- repair
-  #- time
-  #- weather
+  - color
+  - balance
+  - buy
+  - sell
+  - trade
+  - free
+  - disposal
+  - warp
+  - kit
 
 # How many times per second can Essentials signs be interacted with per player.
 # Values should be between 1-20, 20 being virtually no lag protection.
 # Lower numbers will reduce the possibility of lag, but may annoy players.
-sign-use-per-second: 4
+sign-use-per-second: 1
 
 # Allow item IDs on pre-existing signs on 1.13 and above.
 # You cannot use item IDs on new signs, but this will allow players to interact with signs that
@@ -351,7 +336,7 @@ unprotected-sign-names:
 # Backup runs a batch/bash command while saving is disabled.
 backup:
   # Interval in minutes.
-  interval: 30
+  interval: 10
   # Unless you add a valid backup command or script here, this feature will be useless.
   # Use 'save-all' to simply force regular world saving without backup.
   #command: 'rdiff-backup World1 backups/World1'
@@ -364,8 +349,7 @@ per-warp-permission: false
 # Detailed instructions and examples can be found on the wiki: http://wiki.ess3.net/wiki/List
 list:
     # To merge groups, list the groups you wish to merge
-    #Staff: owner admin moderator
-    Admins: owner admin
+    Staff: god admin judge helper
     # To limit groups, set a max user limit
     #builder: 20
     # To hide groups, set the group as hidden
@@ -390,13 +374,13 @@ remove-god-on-disconnect: false
 # After this timeout in seconds, the user will be set as AFK.
 # This feature requires the player to have essentials.afk.auto node.
 # Set to -1 for no timeout.
-auto-afk: 300
+auto-afk: 160
 
 # Auto-AFK Kick
 # After this timeout in seconds, the user will be kicked from the server.
 # essentials.afk.kickexempt node overrides this feature.
 # Set to -1 for no timeout.
-auto-afk-kick: -1
+auto-afk-kick: 180
 
 # Set this to true, if you want to freeze the player, if the player is AFK.
 # Other players or monsters can't push the player out of AFK mode then.
@@ -406,7 +390,7 @@ freeze-afk-players: false
 
 # When the player is AFK, should he be able to pickup items?
 # Enable this, when you don't want people idling in mob traps.
-disable-item-pickup-while-afk: false
+disable-item-pickup-while-afk: true
 
 # This setting controls if a player is marked as active on interaction.
 # When this setting is false, the player would need to manually un-AFK using the /afk command.
@@ -445,7 +429,7 @@ custom-quit-message: "none"
 
 # Add worlds to this list, if you want to automatically disable god mode there.
 no-god-in-worlds:
-#  - world_nether
+  - world_the_end
 
 # Set to true to enable per-world permissions for teleporting between worlds with essentials commands.
 # This applies to /world, /back, /tp[a|o][here|all], but not warps.
@@ -480,13 +464,13 @@ register-back-in-listener: false
 login-attack-delay: 5
 
 #Set the max fly speed, values range from 0.1 to 1.0
-max-fly-speed: 0.8
+max-fly-speed: 10
 
 #Set the max walk speed, values range from 0.1 to 1.0
-max-walk-speed: 0.8
+max-walk-speed: 10
 
 #Set the maximum amount of mail that can be sent within a minute.
-mails-per-minute: 1000
+mails-per-minute: 100
 
 # Set the maximum time /tempban can be used for in seconds.
 # Set to -1 to disable, and essentials.tempban.unlimited can be used to override.
@@ -526,15 +510,13 @@ world-time-permissions: false
 #  '^ban([^ip])( .*)?': 60 # 60 seconds /ban cooldown.
 # Note: If you have a command that starts with ^, then you can escape it using backslash (\). e.g. \^command: 123
 command-cooldowns:
-#  feed: 100 # 100 second cooldown on /feed command
-#  '*': 5 # 5 Second cooldown on all commands
 
 # Whether command cooldowns should be persistent past server shutdowns
 command-cooldown-persistence: true
 
 # Whether NPC balances should be listed in balance ranking features such as /balancetop.
 # NPC balances can include features like factions from FactionsUUID plugin.
-npcs-in-balance-ranking: false
+npcs-in-balance-ranking: true
 
 # Allow bulk buying and selling signs when the player is sneaking.
 # This is useful when a sign sells or buys one item at a time and the player wants to sell a bunch at once.
@@ -574,10 +556,6 @@ is-water-safe: false
 # You should only change this to false if you use Minecraft China.
 safe-usermap-names: true
 
-# Should Essentials output logs when a command block executes a command?
-# Example: CommandBlock at <x>,<y>,<z> issued server command: /<command>
-log-command-block-commands: true
-
 ############################################################
 # +------------------------------------------------------+ #
 # |                   EssentialsHome                     | #
@@ -613,9 +591,6 @@ sethome-multiple:
 # Leaving this as false will retain Essentials' original behaviour, which is to always
 # change the compass' direction to point towards their first home.
 compass-towards-home-perm: false
-
-# Set the maximum speed for projectiles spawned with /fireball.
-max-projectile-speed: 8
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -701,14 +676,14 @@ chat:
   # Users with essentials.chat.shout can override this by prefixing text with an exclamation mark (!)
   # Users with essentials.chat.question can override this by prefixing text with a question mark (?)
   # You can add command costs for shout/question by adding chat-shout and chat-question to the command costs section."
-  radius: 0
+  radius: 16
 
   # Chat formatting can be done in two ways, you can either define a standard format for all chat.
   # Or you can give a group specific chat format, to give some extra variation.
   # For more information of chat formatting, check out the wiki: http://wiki.ess3.net/wiki/Chat_Formatting
   # For EssentialsX changes, take a look at the EssentialsX wiki: https://github.com/EssentialsX/Essentials/wiki
 
-  format: '<{DISPLAYNAME}> {MESSAGE}'
+  format: '&r {DISPLAYNAME} &6►&f {MESSAGE}'
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
   #format: '&7{PREFIX}&r {DISPLAYNAME}&r &7{SUFFIX}&r: {MESSAGE}'
 
@@ -738,16 +713,16 @@ protect:
     flint-fire: false
     lightning-fire-spread: true
     portal-creation: false
-    tnt-explosion: false
+    tnt-explosion: true
     tnt-playerdamage: false
-    tnt-minecart-explosion: false
+    tnt-minecart-explosion: true
     tnt-minecart-playerdamage: false
-    fireball-explosion: false
+    fireball-explosion: true
     fireball-fire: false
     fireball-playerdamage: false
-    witherskull-explosion: false
+    witherskull-explosion: true
     witherskull-playerdamage: false
-    wither-spawnexplosion: false
+    wither-spawnexplosion: true
     wither-blockreplace: false
     creeper-explosion: false
     creeper-playerdamage: false
@@ -758,22 +733,6 @@ protect:
     # Monsters won't follow players.
     # permission essentials.protect.entitytarget.bypass disables this.
     entitytarget: false
-    # Prevent certain transformations.
-    transformation:
-      # Prevent creepers becoming charged when struck by lightning.
-      charged-creeper: false
-      # Prevent villagers becoming zombie villagers.
-      zombie-villager: false
-      # Prevent zombie villagers being cured.
-      villager: false
-      # Prevent villagers becoming witches when struck by lightning.
-      witch: false
-      # Prevent pigs becoming zombie pigmen when struck by lightning.
-      zombie-pigman: false
-      # Prevent zombies turning into drowneds, and husks turning into zombies.
-      drowned: false
-      # Prevent mooshrooms changing colour when struck by lightning.
-      mooshroom: false
     # Prevent the spawning of creatures.
     spawn:
       creeper: false
@@ -805,7 +764,6 @@ protect:
       bat: false
       witch: false
       horse: false
-      phantom: false
 
   # Maximum height the creeper should explode. -1 allows them to explode everywhere.
   # Set prevent.creeper-explosion to true, if you want to disable creeper explosions.
@@ -911,7 +869,7 @@ newbies:
   # If so, use this format, replacing {DISPLAYNAME} with the player name.
   # If not, set to ''
   #announce-format: ''
-  announce-format: '&dWelcome {DISPLAYNAME}&d to the server!'
+  announce-format: '&r&f◆&aUni&bCorn&f► &7➟ &f Приветствуем {DISPLAYNAME} на сервере ✌'
 
   # When we spawn for the first time, which spawnpoint do we use?
   # Set to "none" if you want to use the spawn point of the world.
@@ -920,7 +878,7 @@ newbies:
   # Do we want to give users anything on first join? Set to '' to disable
   # This kit will be given regardless of cost and permissions, and will not trigger the kit delay.
   #kit: ''
-  kit: tools
+  kit: start
 
 # What priority should we use for handling respawns?
 # Set this to none, if you want vanilla respawning behaviour.
@@ -935,10 +893,7 @@ respawn-listener-priority: high
 spawn-join-listener-priority: high
 
 # When users die, should they respawn at their first home or bed, instead of the spawnpoint?
-respawn-at-home: false
-
-# If no home is set, would you like to send the player to spawn? (Only applies to /home)
-spawn-if-no-home: true
+respawn-at-home: true
 
 # Teleport all joining players to the spawnpoint
 spawn-on-join: false
