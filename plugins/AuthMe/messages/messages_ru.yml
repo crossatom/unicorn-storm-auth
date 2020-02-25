@@ -1,0 +1,107 @@
+#rus by DarkFort - vk.com/b_o_d_ik
+# Registration
+reg_msg: '&6Auth &f>> &7Зарегистрируйся &f- &c/register &8[&cПароль&8] &8[&cПароль&8]'
+usage_reg: '&6Auth &f>> &7Использование: &c/register &8[&cПароль&8] &8[&cПароль&8]'
+reg_only: '&cНа сервер совершена ддос/бот атака, для новых игроков временно вход воспрещен для снижения лагов на сервере! Для полной информации загляните в группу сервера! Уже через некоторое время Вы сможете зайти на сервер.'
+kicked_admin_registered: '&6Auth &f>> &7Администратор зарегистрировал ваш аккаунт. Пожалуйста, войдите снова!'
+registered: '&6Auth &f>> &7Вы успешно зарегистрировались!'
+reg_disabled: '&6Auth &f>> &cРегистрация выключена!'
+user_regged: '&6Auth &f>> &cИгрок уже зарегистрирован, смените ник :D'
+
+# Password errors on registration
+password_error: '&6Auth &f>> &cПароли не совпадают!'
+password_error_nick: '&6Auth &f>> &cВы не можете использовать ваш ник в качестве пароля!'
+password_error_unsafe: '&6Auth &f>> &cВы не можете использовать небезопасный пароль!'
+password_error_chars: '&6Auth &f>> &cВаш пароль содержит недопустимые символы. Допустимые символы: REG_EX'
+pass_len: '&6Auth &f>> &cВаш пароль не достигает минимальной длины или привышает максимальную!'
+
+# Login
+usage_log: '&6Auth &f>> &7Использование: &c/login &8[&cПароль&8]'
+wrong_pwd: '&6Auth &f>> &cНеправильный пароль! Попробуй ещё раз!'
+login: '&6Auth &f>> &7Вы зашли на сервер, приятной игры!'
+login_msg: '&6Auth &f>> &7Авторизуйся &f- &c/login &8[&cПароль&8]'
+timeout: '&6Auth &f>> &cВремя авторизации вышло, если вы забыли пароль и у вас к аккаунту привязана почта, воспользуйтесь командой &c/email recovery [Ваш Email]&c. Если ваш ник не зарегистрирован еще на сервере, пропишите &c/reg [Пароль] [Пароль] &c- пароль вам надо придумать самим.'
+
+# Errors
+unknown_user: '&6Auth &f>> &cДанный игрок не найден в базе данных!'
+denied_command: '&6Auth &f>> &cДля использования этой команды, вы должны авторизоваться!'
+denied_chat: '&6Auth &f>> &cДля общения в чате вы должны авторизоваться!'
+not_logged_in: '&6Auth &f>> &cТы не в игре!'
+tempban_max_logins: '&cВы были временно забанены за то, что пытались войти слишком много раз.'
+max_reg: '&6Auth &f>> &cВы превысили максимальное число регистраций &8(&a%reg_count&a/&a%max_acc %reg_names&8) &cна ваш IP!'
+no_perm: '&6Auth &f>> &cК сожалению у вас нету прав :|'
+error: '&6Auth &f>> &cЧто-то пошло не так... Свяжись с администратором.'
+kick_forvip: '&6Auth &f>> &6VIP игрок зашел на переполненный сервер!'
+
+# AntiBot
+kick_antibot: '&6Auth &f>> &cНа сервер совершена ддос/бот атака, для новых игроков временно вход воспрещен для снижения лагов на сервере! Для полной информации загляните в группу сервера! Уже через некоторое время Вы сможете зайти на сервер.'
+antibot_auto_enabled: '&6Guard &f>> &cAntiBot-режим автоматически включен из-за большого количества входов!'
+antibot_auto_disabled: '&6Guard &f>> &cAntiBot-режим автоматически отключен после &e%m &cмин. Надеюсь атака закончилась.'
+
+# Other messages
+unregistered: '&6Auth &f>> &cАккаунт удален!'
+accounts_owned_self: '&6Auth &f>> &cВы имеете &e%count &cаккаунта(ов):'
+accounts_owned_other: '&6Auth &f>> &cИгрок &e%name &cимеет &e%count &cаккаунта(ов):'
+two_factor_create: '&6Auth &f>> &7Ваш секретный код &c%code&7. Вы можете сканировать его отсюда &c%url'
+recovery_code_sent: '&6Auth &f>> &7Код восстановления для сброса пароля был отправлен на ваш Email.'
+recovery_code_incorrect: '&6Auth &f>> &cКод восстановления не является правильным! &7Используйте &c/email recovery &8[&cemail&8] &cчтобы сгенерировать новый.'
+recovery_tries_exceeded: '&6Auth &f>> &7Превышено максимальное количество попыток ввода кода восстановления. Используйте &c/email recovery &8[&cemail&8] &7для создания нового.'
+recovery_code_correct: '&6Auth &f>> &aКод восстановления введен правильно!'
+recovery_change_password: '&6Auth &f>> &7Используйте команду &c/email setpassword <новый пароль> &7чтобы немедленно изменить свой пароль.'
+vb_nonActiv: '&6Auth &f>> &7Ваш аккаунт ещё не активирован! Проверьте вашу почту.'
+usage_unreg: '&6Auth &f>> &7Используйте: &c/unregister &8[&cПароль&8]'
+pwd_changed: '&6Auth &f>> &7Пароль был изменён!'
+logged_in: '&6Auth &f>> &cПароль вводить не нужно! Вы уже в сети!'
+logout: '&6Auth &f>> &7Вы успешно вышли!'
+reload: '&6Auth &f>> &7Конфигурация и база данных были перезагружены!'
+usage_changepassword: '&6Auth &f>> &7Используйте: &c/changepassword &8[&cCтарый_Пароль&8] &8[&cНовый_Пароль&8]'
+
+# Session messages
+invalid_session: '&6Auth &f>> &cСессия истекла! Пароль нужно ввести снова.'
+valid_session: '&6Auth &f>> &7Продолжайте играть, пароль сохранён.'
+
+# Error messages when joining
+name_len: '&6Auth &f>> &cВаш ник слишком короткий или слишком длинный!'
+regex: '&6Auth &f>> &cВаш ник содержит недопустимые символы. Допустимые символы: REG_EX'
+country_banned: '&6Auth &f>> &cВаша страна запрещена на этом сервере!'
+not_owner_error: '&6Auth &f>> &cВы не являетесь владельцем этого ника. Пожалуйста, смените ваш ник!'
+kick_fullserver: '&6Auth &f>> &cСервер заполен, зайдите чуть позже, либо подождите.'
+same_nick: '&6Auth &f>> &cИгрок уже играет с таким ником на сервере или же просто перезайди :)'
+invalid_name_case: '&6Auth &f>> &cВы должны зайти на сервер с ником &a%valid, но не &a%invalid.'
+same_ip_online: '&6Auth &f>> &cИгрок с таким же IP уже играет на сервере!'
+
+# Email
+usage_email_add: '&6Auth &f>> &7Использование: &c/email add &8[&cВаш Email&8] &8[&cВаш Email&8]'
+usage_email_change: '&6Auth &f>> &7Использование: &c/email change &8[&cСтарый Email&8] &8[&cНовый Email&8]'
+usage_email_recovery: '&6Auth &f>> &7Использование: &e/email recovery &8[&cВаш Email&8]'
+new_email_invalid: '&6Auth &f>> &cНедействительный новый Email!'
+old_email_invalid: '&6Auth &f>> &cНедействительный старый Email!'
+email_invalid: '&6Auth &f>> &cНедействительный Email!'
+email_added: '&6Auth &f>> &7Email добавлен!'
+email_confirm: '&6Auth &f>> &7Подтвердите ваш Email!'
+email_changed: '&6Auth &f>> &7Email изменен!'
+email_send: '&6Auth &f>> &aВосстановительное письмо отправлено! Проверьте вашу почту!'
+email_show: '&6Auth &f>> &7Ваш текущий Email адрес: &c%email'
+incomplete_email_settings: '&6Auth &f>> &cНе все необходимые параметры установлены для отправки электронной почты. Пожалуйста, обратитесь к администратору.'
+email_already_used: '&6Auth &f>> &cЭтот адрес Email уже используется!'
+email_send_failure: '&6Auth &f>> &cEmail не может быть отправлено! Пожалуйста, обратитесь к администратору.'
+show_no_email: '&6Auth &f>> &7Email адрес не был привязан к этому аккаунту!'
+add_email: '&6Auth &f>> &7Пожалуйста, добавьте свой Email, введя: &c/email add &8[&cВаш Email&8] &8[&cВаш Email&8]'
+recovery_email: '&6Auth &f>> &7Забыл пароль? Восстанови через почту &c/email recovery &8[&cВаш Email&8]'
+change_password_expired: '&6Auth &f>> &7Вы больше не можете изменить свой пароль этой командой.'
+email_cooldown_error: '&6Auth &f>> &cНа email уже было отправлено. Вы должны подождать &a%time&8, прежде чем вы сможете отправить.'
+
+# Captcha
+usage_captcha: '&6Auth &f>> &7Используйте: &c/captcha &8[&c<theCaptcha>&8]'
+wrong_captcha: '&6Auth &f>> &7Неверная капча, используйте: &c/captcha &8[&cTHE_CAPTCHA&8]'
+valid_captcha: '&6Auth &f>> &eКапча успешно введена!'
+
+# Time units
+second: 'секунда'
+seconds: 'секунд'
+minute: 'минута'
+minutes: 'минут'
+hour: 'час'
+hours: 'часов'
+day: 'день'
+days: 'дней'

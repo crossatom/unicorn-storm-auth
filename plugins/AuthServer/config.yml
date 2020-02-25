@@ -1,0 +1,9 @@
+needRegister:
+  title: "§cЗарегистрируйтесь"
+  subtitle: "§e/reg <пароль> <пароль>"
+needLogin: 
+  title: "§cАвторизуйтесь"
+  subtitle: "§e/l <пароль>"
+titleTime: 15
+allowmove: true
+server: "none"
