@@ -617,3 +617,56 @@
 [02-25 21:57:47]: [FINE] Missalequeen registered 127.0.0.1
 [02-25 21:57:47]: [FINE] Missalequeen logged in!
 [02-25 21:57:55]: [INFO] AuthMe 5.4.0-b1877 disabled!
+[02-25 21:59:03]: [INFO] SQLite Setup finished
+[02-25 21:59:03]: [INFO] No supported permissions system found! Permissions are disabled!
+[02-25 21:59:03]: [WARN] Could not download GeoLiteAPI database [UnknownHostException]: geolite.maxmind.com
+[02-25 21:59:03]: java.net.UnknownHostException: geolite.maxmind.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at fr.xephi.authme.service.GeoIpService$1.run(GeoIpService.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+[02-25 21:59:03]: [WARN] WARNING! The denyTabComplete feature requires ProtocolLib! Disabling it...
+[02-25 21:59:03]: [INFO] Development builds are available on our jenkins, thanks to f14stelt.
+[02-25 21:59:03]: [INFO] Do you want a good game server? Look at our sponsor GameHosting.it leader in Italy as Game Server Provider!
+[02-25 21:59:03]: [INFO] AuthMe 5.4.0 build n.1877 correctly enabled!
+[02-25 21:59:05]: [FINE] Missalequeen logged in!
+[03-17 11:22:51]: [INFO] SQLite Setup finished
+[03-17 11:22:51]: [INFO] No supported permissions system found! Permissions are disabled!
+[03-17 11:22:51]: [WARN] Could not download GeoLiteAPI database [UnknownHostException]: geolite.maxmind.com
+[03-17 11:22:51]: java.net.UnknownHostException: geolite.maxmind.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at fr.xephi.authme.service.GeoIpService$1.run(GeoIpService.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+[03-17 11:22:51]: [WARN] WARNING! The denyTabComplete feature requires ProtocolLib! Disabling it...
+[03-17 11:22:51]: [INFO] Development builds are available on our jenkins, thanks to f14stelt.
+[03-17 11:22:51]: [INFO] Do you want a good game server? Look at our sponsor GameHosting.it leader in Italy as Game Server Provider!
+[03-17 11:22:51]: [INFO] AuthMe 5.4.0 build n.1877 correctly enabled!
+[03-17 11:24:33]: [FINE] Missalequeen logged in!
+[03-17 11:32:53]: [INFO] AuthMe 5.4.0-b1877 disabled!
