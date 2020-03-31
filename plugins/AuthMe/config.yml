@@ -94,13 +94,13 @@ settings:
         # The next time the player joins the server, if his IP
         # is the same as last time and the timeout hasn't
         # expired, he will not need to authenticate.
-        enabled: true
+        enabled: false
         # After how many minutes should a session expire?
         # A player's session ends after the timeout or if his IP has changed
-        timeout: 900
+        timeout: 10
     # Message language, available languages:
     # https://github.com/AuthMe/AuthMeReloaded/blob/master/docs/translations.md
-    messagesLanguage: 'ru'
+    messagesLanguage: 'en'
     # Forces authme to hook into Vault instead of a specific permission handler system.
     forceVaultHook: false
     # Log level: INFO, FINE, DEBUG. Use INFO for general messages,
@@ -131,7 +131,7 @@ settings:
         - '/captcha'
         # Max number of allowed registrations per IP
         # The value 0 means an unlimited number of registrations!
-        maxRegPerIp: 4
+        maxRegPerIp: 1
         # Minimum allowed username length
         minNicknameLength: 3
         # Maximum allowed username length
@@ -146,11 +146,13 @@ settings:
             # authentication. The quit location of the player will be overwritten.
             # This is different from "teleportUnAuthedToSpawn" that teleport player
             # to the spawnpoint on join.
-            enabled: true
+            enabled: false
             # WorldNames where we need to force the spawn location
             # Case-sensitive!
             worlds: 
             - 'world'
+            - 'world_nether'
+            - 'world_the_end'
         # This option will save the quit location of the players.
         SaveQuitLocation: false
         # To activate the restricted user feature you need
@@ -173,26 +175,26 @@ settings:
         # Should not logged in players be teleported to the spawn?
         # After the authentication they will be teleported back to
         # their normal position.
-        teleportUnAuthedToSpawn: true
+        teleportUnAuthedToSpawn: false
         # Can unregistered players walk around?
-        allowMovement: true
+        allowMovement: false
         # After how many seconds should players who fail to login or register
         # be kicked? Set to 0 to disable.
-        timeout: 80
+        timeout: 30
         # Regex pattern of allowed characters in the player name.
-        allowedNicknameCharacters: '[a-zA-Zа-яА-Я0-9_]*'
+        allowedNicknameCharacters: '[a-zA-Z0-9_]*'
         # How far can unregistered players walk?
         # Set to 0 for unlimited radius
-        allowedMovementRadius: 50
+        allowedMovementRadius: 100
         # Should we protect the player inventory before logging in? Requires ProtocolLib.
-        ProtectInventoryBeforeLogIn: false
+        ProtectInventoryBeforeLogIn: true
         # Should we deny the tabcomplete feature before logging in? Requires ProtocolLib.
-        DenyTabCompleteBeforeLogin: true
+        DenyTabCompleteBeforeLogin: false
         # Should we display all other accounts from a player when he joins?
         # permission: /authme.admin.accounts
-        displayOtherAccounts: false
+        displayOtherAccounts: true
         # Spawn priority; values: authme, essentials, multiverse, default
-        spawnPriority: 'authme,default'
+        spawnPriority: 'authme,essentials,multiverse,default'
         # Maximum Login authorized by IP
         maxLoginPerIp: 0
         # Maximum Join authorized by IP
@@ -207,7 +209,7 @@ settings:
         otherAccountsCmdThreshold: 0
         # Command to run when a user has more accounts than the configured threshold.
         # Available variables: %playername%, %playerip%
-        otherAccountsCmd: ''
+        otherAccountsCmd: 'say The player %playername% with ip %playerip% has multiple accounts!'
     GameMode:
         # Force survival gamemode when player joins?
         ForceSurvivalMode: false
@@ -285,7 +287,7 @@ settings:
     # {MAXPLAYERS}: display server slots, {IP}: player ip, {LOGINS}: number of players logged,
     # {WORLD}: player current world, {SERVER}: server name
     # {VERSION}: get current bukkit version, {COUNTRY}: player country
-    useWelcomeMessage: false
+    useWelcomeMessage: true
     # Broadcast the welcome message to the server or only to the player?
     # set true for server or false for player
     broadcastWelcomeMessage: false
@@ -299,11 +301,11 @@ settings:
     # {DISPLAYNAMENOCOLOR}: the player display name (without colors)
     customJoinMessage: ''
     # Should we remove the leave messages of unlogged users?
-    removeUnloggedLeaveMessage: true
+    removeUnloggedLeaveMessage: false
     # Should we remove join messages altogether?
-    removeJoinMessage: true
+    removeJoinMessage: false
     # Should we remove leave messages altogether?
-    removeLeaveMessage: true
+    removeLeaveMessage: false
     # Do we need to add potion effect Blinding before login/reigster?
     applyBlindEffect: false
     # Do we need to prevent people to login with another case?
@@ -365,9 +367,9 @@ Hooks:
     # Do we need to hook with multiverse for spawn checking?
     multiverse: true
     # Do we need to hook with BungeeCord?
-    bungeecord: true
+    bungeecord: false
     # Send player to this BungeeCord server after register/login
-    sendPlayerTo: 'survival'
+    sendPlayerTo: ''
     # Do we need to disable Essentials SocialSpy on join?
     disableSocialSpy: false
     # Do we need to force /motd Essentials command on join?
@@ -376,7 +378,7 @@ Protection:
     # Enable some servers protection (country based login, antibot)
     enableProtection: false
     # Apply the protection also to registered usernames
-    enableProtectionRegistered: false
+    enableProtectionRegistered: true
     # Countries allowed to join the server and register. For country codes, see
     # http://dev.maxmind.com/geoip/legacy/codes/iso3166/
     # PLEASE USE QUOTES!
@@ -388,7 +390,7 @@ Protection:
     countriesBlacklist: 
     - 'A1'
     # Do we need to enable automatic antibot system?
-    enableAntiBot: false
+    enableAntiBot: true
     # The interval in seconds
     antiBotInterval: 5
     # Max number of players allowed to login in the interval
@@ -485,7 +487,7 @@ limbo:
         # DISABLED: no disk storage,
         # INDIVIDUAL_FILES: each player data in its own file,
         # DISTRIBUTED_FILES: distributes players into different files based on their UUID, see below
-        type: 'DISABLED'
+        type: 'INDIVIDUAL_FILES'
         # This setting only affects DISTRIBUTED_FILES persistence. The distributed file
         # persistence attempts to reduce the number of files by distributing players into various
         # buckets based on their UUID. This setting defines into how many files the players should
@@ -499,16 +501,16 @@ limbo:
     # Whether the player is allowed to fly: RESTORE, ENABLE, DISABLE, NOTHING.
     # RESTORE sets back the old property from the player. NOTHING will prevent AuthMe
     # from modifying the 'allow flight' property on the player.
-    restoreAllowFlight: 'DISABLE'
+    restoreAllowFlight: 'RESTORE'
     # Restore fly speed: RESTORE, DEFAULT, MAX_RESTORE, RESTORE_NO_ZERO.
     # RESTORE: restore the speed the player had;
     # DEFAULT: always set to default speed;
     # MAX_RESTORE: take the maximum of the player's current speed and the previous one
     # RESTORE_NO_ZERO: Like 'restore' but sets speed to default if the player's speed was 0
-    restoreFlySpeed: 'DEFAULT'
+    restoreFlySpeed: 'RESTORE_NO_ZERO'
     # Restore walk speed: RESTORE, DEFAULT, MAX_RESTORE, RESTORE_NO_ZERO.
     # See above for a description of the values.
-    restoreWalkSpeed: 'DEFAULT'
+    restoreWalkSpeed: 'RESTORE_NO_ZERO'
 BackupSystem:
     # General configuration for backups: if false, no backups are possible
     ActivateBackup: false
